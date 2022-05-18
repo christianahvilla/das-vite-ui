@@ -1,0 +1,81 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "eslint-plugin-prettier"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "eslint-plugin-prettier"
+    ],
+    "rules": {
+        "semi": 1,
+        "comma-dangle": 0,
+        "prettier/prettier": "error",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": [
+                    "./src/**/*.@(js|jsx|ts|tsx)" 
+                ]
+            }
+        ],
+
+        "jsx-a11y/label-has-associated-control": [ 2, {
+            "components": [ "Label" ],
+            "required": {
+                "some": [ "nesting", "id" ]
+            },
+            "allowChildren": false
+        }],
+
+        "max-len": [2, 200, 4, {"ignoreUrls": true}],
+
+        "react/jsx-props-no-spreading": ["off"],
+
+        "react/prop-types": 0,
+
+        "arrow-body-style": 0,
+
+        "no-useless-escape": 0,
+
+        "react-hooks/rules-of-hooks": "off",
+
+        "react-hooks/exhaustive-deps": "off",
+
+        "camelcase": "off",
+
+        "linebreak-style": ["error", "windows"],
+
+        "no-unused-vars": [
+            "error",
+            { 
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_"
+            }
+        ],
+        "react/function-component-definition": [
+            2,
+            {
+                "namedComponents": "arrow-function",
+                "unnamedComponents": "arrow-function"
+            }
+        ]
+    },
+    "ignorePatterns": ["!**/*", "./src/**/*.@(js|jsx|ts|tsx)"]
+}

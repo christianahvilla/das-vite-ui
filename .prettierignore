@@ -1,0 +1,21 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env
+
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+*.html
